@@ -138,7 +138,7 @@
 $(function(){
   $.ajax({
     type:'GET',
-    url: 'http://api.openweathermap.org/data/2.5/weather?lat=3.14&lon=101.69&units=metric&APPID=9771952d2d67da2146a235657f2e4cf9',
+    url: 'https://api.openweathermap.org/data/2.5/weather?lat=3.14&lon=101.69&units=metric&APPID=9771952d2d67da2146a235657f2e4cf9',
     success:function(data)
     {
       // console.log('success',data);
@@ -153,7 +153,7 @@ $(function(){
   });
   $.ajax({
     type:'GET',
-    url: 'http://api.openweathermap.org/data/2.5/forecast?lat=3.14&lon=101.69&units=metric&APPID=9771952d2d67da2146a235657f2e4cf9',
+    url: 'https://api.openweathermap.org/data/2.5/forecast?lat=3.14&lon=101.69&units=metric&APPID=9771952d2d67da2146a235657f2e4cf9',
     success:function(data)
     {
       console.log('success',data.list[0].dt_txt);
