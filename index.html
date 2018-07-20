@@ -14,10 +14,6 @@
 <link href="css/pages/dashboard.css" rel="stylesheet">
 <!-- convert date to day -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
-<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
-<!--[if lt IE 9]>
-      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
 </head>
 <body>
 <div class="navbar navbar-fixed-top">
@@ -136,6 +132,7 @@
 <script src="js/base.js"></script> 
 <script>     
 $(function(){
+  //ajax for get current weather
   $.ajax({
     type:'GET',
     url: 'https://api.openweathermap.org/data/2.5/weather?lat=3.14&lon=101.69&units=metric&APPID=9771952d2d67da2146a235657f2e4cf9',
@@ -152,6 +149,7 @@ $(function(){
     }
   });
   $.ajax({
+    //ajax for get next 5 day weather with 3 hour intervals
     type:'GET',
     url: 'https://api.openweathermap.org/data/2.5/forecast?lat=3.14&lon=101.69&units=metric&APPID=9771952d2d67da2146a235657f2e4cf9',
     success:function(data)
